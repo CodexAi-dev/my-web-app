@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Web App</title>
+</head>
+<body>
+  <h1>My first deployed app 🚀</h1>
+  <p id="msg">Loading...</p>
+
+  <script>
+    fetch('/api/hello')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('msg').textContent = data.message;
+      });
+  </script>
+</body>
+</html>
